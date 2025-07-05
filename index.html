@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PumaTec - Excelencia en Mantenimiento</title>
+
+  <link rel="shortcut icon" href="IMAGENES/icono.png" type="image/x-icon" />
+
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="fontawesome-free-6.5.2/css/all.min.css" />
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="animatecss/animate.min.css" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="animaciones/aos/dist/aos.css" />
+
+  <!-- Estilo Futurista -->
+  <style>
+    :root {
+      --primary-color: #00ffe0;
+      --secondary-color: #ff004c;
+      --background-color: #000010;
+      --text-color: #ffffff;
+      --accent-glow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+    }
+
+    body {
+      background: linear-gradient(135deg, #000010, #050022);
+      color: var(--text-color);
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header, footer {
+      background-color: rgba(0, 0, 20, 0.9);
+      border-bottom: 1px solid var(--primary-color);
+      box-shadow: var(--accent-glow);
+    }
+
+    .navbar-brand img {
+      border-radius: 50%;
+      box-shadow: var(--accent-glow);
+    }
+
+    .nav-link {
+      color: var(--text-color) !important;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+      text-shadow: var(--accent-glow);
+    }
+
+    h1, h2, h3, .display-4 {
+      color: var(--primary-color);
+      text-shadow: var(--accent-glow);
+    }
+
+    a.btn, button.btn {
+      border: 1px solid var(--primary-color);
+      background-color: transparent;
+      color: var(--primary-color);
+      box-shadow: var(--accent-glow);
+      transition: all 0.4s;
+    }
+
+    a.btn:hover, button.btn:hover {
+      background-color: var(--primary-color);
+      color: #000;
+      box-shadow: 0 0 20px var(--primary-color);
+    }
+
+    section {
+      padding: 80px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background-color: rgba(0,0,0,0.8);
+      border: 1px solid var(--primary-color);
+      box-shadow: var(--accent-glow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px var(--primary-color);
+    }
+
+    footer {
+      border-top: 1px solid var(--primary-color);
+    }
+
+    /* Partículas simples simuladas */
+    .particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(0,255,255,0.05) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: moveBackground 30s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveBackground {
+      from { background-position: 0 0; }
+      to { background-position: 100px 100px; }
+    }
+
+    .map-iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: var(--accent-glow);
+    }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+  <div class="particles"></div>
+
+  <header class="menu fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#top">
+          <img src="IMAGENES/logo_blanco.jpg" alt="Logo PumaTec" width="60" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#top"><i class="fa-solid fa-house"></i> Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#somos"><i class="fa-solid fa-heart fa-beat"></i> Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios"><i class="fa-solid fa-cog fa-spin"></i> Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonios"><i class="fa-solid fa-bell fa-shake"></i> Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto"><i class="fa-solid fa-envelope fa-bounce"></i> Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <br><br>
+
+  <main>
+    <section class="text-center animate__animated animate__fadeIn">
+      <img src="IMAGENES/logo_negro.png" alt="Logo de PumaTec" class="img-fluid rounded-circle shadow" width="200">
+      <h1 class="mt-4 display-4 animate__animated animate__pulse animate__infinite">Excelencia en Mantenimiento Informático</h1>
+      <p class="lead">Tu aliado tecnológico para reparaciones y rendimiento</p>
+      <div class="mt-4">
+        <a href="https://wa.me/976516679" class="btn mx-2" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100091979136923" class="btn mx-2" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+      </div>
+    </section>
+
+<section id="somos" class="bg-dark">
+  <div class="container">
+    <h2 class="text-center display-4 animate__animated animate__fadeInDown mb-4" style="color: #00ffe0; text-shadow: 0 0 20px #00ffe0;">
+      <i class="fa-solid fa-user-astronaut fa-bounce"></i> ¿Quiénes Somos?
+    </h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1500">
+        <div class="p-4 rounded neon-box">
+          <p class="lead text-center mb-3">
+            En <strong>PumaTec</strong>, somos especialistas en mantenimiento y reparación de computadoras con un enfoque innovador. Nuestra pasión por la tecnología nos impulsa a ofrecer soluciones personalizadas y eficientes, garantizando el rendimiento óptimo de tus equipos con un estilo vanguardista.
+          </p>
+          <div class="text-center mt-3">
+            <a href="https://www.instagram.com/pumatec8/" class="btn" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i> Síguenos en Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="servicios">
+      <div class="container">
+        <h2 class="text-center display-4 animate__animated animate__fadeInDown">Servicios</h2>
+        <div class="row mt-5">
+          <!-- Servicios cards -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card text-center">
+              <img src="IMAGENES/mantenimiento-de-computadoras.png" class="card-img-top rounded-circle mx-auto mt-3" alt="Diagnóstico y Reparación" style="width: 150px; height: 150px;">
+              <div class="card-body">
+                <h5 class="card-title">Diagnóstico y Reparación</h5>
+                <p class="card-text">Identifico y soluciono problemas de hardware y software con precisión.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card text-center">
+              <img src="IMAGENES/Mantenimiento_Preventivo.png" class="card-img-top rounded-circle mx-auto mt-3" alt="Optimización de Rendimiento" style="width: 150px; height: 150px;">
+              <div class="card-body">
+                <h5 class="card-title">Optimización de Rendimiento</h5>
+                <p class="card-text">Aumenta la velocidad y eficiencia de tus sistemas con servicios premium.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card text-center">
+              <img src="IMAGENES/Manteniiento3.png" class="card-img-top rounded-circle mx-auto mt-3" alt="Mantenimiento Preventivo" style="width: 150px; height: 150px;">
+              <div class="card-body">
+                <h5 class="card-title">Mantenimiento Preventivo</h5>
+                <p class="card-text">Evita fallos futuros con un mantenimiento regular.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="bg-black">
+  <div class="container">
+    <h2 class="text-center display-4 animate__animated animate__fadeInDown mb-4" style="color: #00ffe0; text-shadow: 0 0 20px #00ffe0;">
+      <i class="fa-solid fa-comments fa-shake"></i> Testimonios
+    </h2>
+    <div class="row mt-4">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="testimonial futuristic-panel">
+          <p class="mb-0">“El servicio de mantenimiento de <strong>PumaTec</strong> es excepcional. Mis computadoras funcionan como nuevas gracias a su precisión técnica y atención al detalle.”</p>
+          <hr class="glow-line">
+          <p class="text-end fw-bold">— Cliente Satisfecho</p>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="testimonial futuristic-panel">
+          <p class="mb-0">“Recomiendo <strong>PumaTec</strong> sin duda. Su conocimiento técnico, amabilidad y diseño futurista hacen la diferencia.”</p>
+          <hr class="glow-line">
+          <p class="text-end fw-bold">— Cliente Feliz</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contacto" class="bg-dark">
+  <div class="container">
+    <h2 class="text-center display-4 animate__animated animate__bounce mb-4" style="color: #00ffe0; text-shadow: 0 0 20px #00ffe0;">
+      <i class="fa-solid fa-location-dot fa-beat"></i> Contacto
+    </h2>
+    <div class="row">
+      <div class="col-md-6 text-center mb-4">
+        <h4 style="color: #00ffe0;">Jaén - Cajamarca - Perú</h4>
+        <p>Nicolás Gutiérrez 615</p>
+        <p><a href="https://wa.me/+51976516679" class="btn"><i class="fab fa-whatsapp"></i> (+51) 976 516 679</a></p>
+        <p><a href="mailto:pumatec.soporte.2024@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> pumatec.soporte.2024@gmail.com</a></p>
+        <div class="map-glow">
+  <iframe
+    class="map-iframe"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251.54719100476384!2d-78.81703473456117!3d-5.706548322081337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b4fb0b81579a3d%3A0x257eef894ea9bbc6!2sPUMATEC!5e0!3m2!1ses-419!2spe!4v1716156632549!5m2!1ses-419!2spe"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+      </div>
+      <div class="col-md-6">
+        <form id="usuarios" class="row g-3" method="post">
+          <div class="col-12" data-aos="fade-up">
+            <label class="form-label">Nombre y Apellidos</label>
+            <input type="text" name="nombre" class="form-control" required>
+          </div>
+          <div class="col-12" data-aos="fade-up">
+            <label class="form-label">Teléfono</label>
+            <input type="text" name="telefono" class="form-control" required>
+          </div>
+          <div class="col-12" data-aos="fade-up">
+            <label class="form-label">Correo Electrónico</label>
+            <input type="email" name="correo" class="form-control" required>
+          </div>
+          <div class="col-12" data-aos="fade-up">
+            <label class="form-label">Mensaje</label>
+            <textarea name="mensaje" class="form-control" rows="4" required></textarea>
+          </div>
+          <div>
+            <button type="button" class="btn" onclick="enviarWhatsApp()">Contáctanos</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 PumaTec®. Todos los derechos reservados.</p>
+      <a href="#top" class="back-to-top" aria-label="Volver arriba">
+  <i class="fas fa-arrow-up"></i>
+</a>
+
+  </footer>
+
+  <script src="bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+  <script src="jquery/jquery-3.7.1.min.js"></script>
+  <script src="animaciones/aos/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+  window.addEventListener('scroll', () => {
+    const backToTop = document.querySelector('.back-to-top');
+    if (window.scrollY > 200) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
